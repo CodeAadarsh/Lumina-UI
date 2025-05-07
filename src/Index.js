@@ -19,8 +19,7 @@ import { AnimatedTestimonialSlider } from './components/ui/AnimatedTestimonialSl
 import { Carousel, CarouselSlide, CarouselCaption } from './components/ui/CarouselSlide';
 
 import { HoverCard3D, HoverCard3DWithTheme } from './components/ui/HoverCard3D';
-import { HeroGrid } from './HeroGrid';
-
+import { HeroGrid } from './components/ui/HeroGrid';
 
 import { Modal, ModalHeader, ModalBody, ModalFooter } from './components/ui/Modal';
 
