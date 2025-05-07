@@ -2,6 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import * as pkg from './package.json';
+import dts from 'vite-plugin-dts'; 
+
 
 // List of dependencies to exclude from bundle
 const external = [
@@ -12,6 +14,10 @@ const external = [
 export default defineConfig({
   plugins: [
     react(),
+    dts({
+      insertTypesEntry: true,
+      outDir: 'dist/types',
+    }),
   ],
   resolve: {
     alias: {

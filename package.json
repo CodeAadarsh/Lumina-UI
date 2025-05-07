@@ -1,16 +1,17 @@
 {
   "name": "lumina-ui-react",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Modern UI Component Library with Attractive Themes",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
-    },
-    "./styles": "./dist/lumina.css"
+"exports": {
+  ".": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
   },
+  "./dist/lumina-ui-react.css": "./dist/lumina-ui-react.css",
+  "./styles": "./dist/lumina-ui-react.css"
+},
   "files": [
     "dist",
     "README.md"
