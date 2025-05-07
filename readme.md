@@ -25,11 +25,34 @@ yarn add lumina-ui-react
 pnpm add lumina-ui-react
 ```
 
+## Important Usage Notes
+
+### CSS Import
+
+Make sure to import the CSS file correctly:
+
+```jsx
+import "lumina-ui-react/dist/lumina-ui-react.css";
+```
+
+### Component Usage
+
+When using sub-components, access them through their parent component:
+
+```jsx
+// CORRECT way to use sub-components
+<UltimateNavbar.Item />
+<Card.Header />
+
+// INCORRECT way
+import { UltimateNavbarItem } from 'lumina-ui-react'; // This won't work!
+```
+
 ## Quick Start
 
 ```jsx
 import { ThemeProvider, Button, Card, HoverCard3D } from 'lumina-ui-react';
-import 'lumina-ui-react/styles';
+import "lumina-ui-react/dist/lumina-ui-react.css";
 
 function App() {
   return (
@@ -55,6 +78,32 @@ function App() {
 }
 ```
 
+## Available Themes
+
+Lumina UI includes several beautiful themes:
+
+- **Enterprise**: Clean, professional design for business applications
+- **TechDark**: Modern dark theme perfect for developer tools
+- **Glass**: Elegant glassmorphism effects with blur and transparency
+- **Neumorphic**: Soft UI design with subtle shadows and highlights
+
+```jsx
+import { ThemeProvider, useTheme } from 'lumina-ui-react';
+
+function ThemeToggle() {
+  const { theme, setTheme } = useTheme();
+  
+  return (
+    <div>
+      <button onClick={() => setTheme('enterprise')}>Enterprise</button>
+      <button onClick={() => setTheme('techDark')}>Tech Dark</button>
+      <button onClick={() => setTheme('glass')}>Glass</button>
+      <button onClick={() => setTheme('neumorphic')}>Neumorphic</button>
+    </div>
+  );
+}
+```
+
 ## Component Showcase
 
 ### Core Components
@@ -65,6 +114,25 @@ function App() {
 - **Modal**: Customizable modal dialogs with animations
 - **Header**: Responsive header component with navigation support
 - **UltimateNavbar**: Advanced navbar with multiple display modes and visual styles
+
+### Navigation Components Example
+
+```jsx
+import { UltimateNavbar } from 'lumina-ui-react';
+import { Home, Dashboard, Settings } from 'some-icon-library';
+
+// Icons-only navbar with tooltips
+<UltimateNavbar
+  theme="glass"
+  display="iconsOnly"
+  tooltipsEnabled={true}
+  visualStyle="floating"
+>
+  <UltimateNavbar.Item icon={<Home />} tooltip="Home" active />
+  <UltimateNavbar.Item icon={<Dashboard />} tooltip="Dashboard" />
+  <UltimateNavbar.Item icon={<Settings />} tooltip="Settings" />
+</UltimateNavbar>
+```
 
 ### Visual Effect Components
 
@@ -84,132 +152,29 @@ function App() {
 - **Testimonial3D**: 3D testimonial display with hover effects
 - **AnimatedTestimonialSlider**: Animated sliders for testimonials
 
-### Motion Components
+## Troubleshooting
 
-- **ScrollMotion**: Scroll-based animations and effects
-- **ScrollMotion3D**: 3D effects triggered by scrolling
-- **ParallaxScrollItem**: Create parallax scrolling effects
+### Common Issues and Solutions
 
-## Themes
+1. **CSS not loading**
+   - Make sure to import the CSS file with the exact path: `import "lumina-ui-react/dist/lumina-ui-react.css";`
 
-Lumina UI includes several beautiful themes:
+2. **Sub-component not found**
+   - Always use sub-components through their parent component: `<UltimateNavbar.Item />` instead of importing `UltimateNavbarItem` directly
 
-### Enterprise
-Clean, professional design for business applications.
+3. **Theme not working**
+   - Verify you're using one of the supported themes: 'enterprise', 'techDark', 'glass', or 'neumorphic'
+   - Ensure the ThemeProvider wraps your components
 
-### TechDark
-Modern dark theme perfect for developer tools and applications.
+4. **Icons not displaying**
+   - Make sure to import and provide the icons from your preferred icon library
 
-### Glass
-Elegant glassmorphism effects with blur and transparency.
-
-### Neumorphic
-Soft UI design with subtle shadows and highlights.
-
-```jsx
-import { ThemeProvider, useTheme } from 'lumina-ui-react';
-
-function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  
-  return (
-    <div>
-      <button onClick={() => setTheme('enterprise')}>Enterprise</button>
-      <button onClick={() => setTheme('techDark')}>Tech Dark</button>
-      <button onClick={() => setTheme('glass')}>Glass</button>
-    </div>
-  );
-}
-```
-
-## Advanced Components
-
-### Interactive Card Examples
-
-```jsx
-import { HoverCard3D, MotionCard } from 'lumina-ui-react';
-
-// 3D hover card with glare effect
-<HoverCard3D
-  theme="techDark"
-  size="md"
-  intensity="strong"
-  hoverEffect="glow"
-  glareEnabled={true}
-  maxRotation={25}
->
-  <div className="p-6">
-    <h3 className="text-xl font-bold">Interactive 3D Card</h3>
-    <p>Hover over me to see the effect!</p>
-  </div>
-</HoverCard3D>
-
-// Motion card with animations
-<MotionCard>
-  <h3>Animated Card</h3>
-  <p>With smooth transitions</p>
-</MotionCard>
-```
-
-### Navigation Components
-
-```jsx
-import { UltimateNavbar, Header } from 'lumina-ui-react';
-
-// Icons-only navbar with tooltips
-<UltimateNavbar
-  theme="glass"
-  display="iconsOnly"
-  tooltipsEnabled={true}
-  visualStyle="floating"
->
-  <UltimateNavbar.Item icon={<HomeIcon />} tooltip="Home" active />
-  <UltimateNavbar.Item icon={<DashboardIcon />} tooltip="Dashboard" />
-  <UltimateNavbar.Item icon={<SettingsIcon />} tooltip="Settings" />
-</UltimateNavbar>
-
-// Full-featured header
-<Header
-  theme="enterprise"
-  position="sticky"
-  variant="elevated"
->
-  <Header.NavItem active>Home</Header.NavItem>
-  <Header.NavItem>Features</Header.NavItem>
-  <Header.NavItem>Pricing</Header.NavItem>
-  <Header.NavItem className="ml-auto">Login</Header.NavItem>
-</Header>
-```
-
-### Creative Effects
-
-```jsx
-import { 
-  TracingBeam, 
-  Spotlight, 
-  TextGenerateEffect, 
-  BackgroundBeams 
-} from 'lumina-ui-react';
-
-// Text generation effect
-<TextGenerateEffect text="Watch this text appear dynamically" />
-
-// Spotlight effect
-<Spotlight>
-  <h1>Interactive spotlight follows your cursor</h1>
-</Spotlight>
-
-// Animated background beams
-<BackgroundBeams>
-  <div className="relative z-10">
-    <h1>Beautiful background effects</h1>
-  </div>
-</BackgroundBeams>
-```
+5. **Component styles look incorrect**
+   - Check for Tailwind CSS conflicts. Lumina UI uses Tailwind CSS internally.
 
 ## Documentation
 
-Visit our [documentation site](https://lumina-ui.dev) for detailed guides and API reference.
+For more detailed documentation, please visit our [GitHub repository](https://github.com/CodeAadarsh/Lumina-UI).
 
 ## Examples
 
@@ -224,7 +189,7 @@ npm run storybook
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please feel free to submit a Pull Request.
 
 ## License
 
