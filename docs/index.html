@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina UI - Modern UI Component Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-4">
+                <span class="gradient-text">Lumina UI</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">
+                Modern, customizable UI components for React
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#install" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Get Started
+                </a>
+                <a href="#components" class="border border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+                    View Components
+                </a>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold mb-2">🎨 Multiple Themes</h3>
+                <p className="text-gray-600">Light, Dark, and Pearl White themes out of the box</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold mb-2">⚡ Customizable</h3>
+                <p className="text-gray-600">Built with Tailwind CSS and CSS variables</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold mb-2">🚀 TypeScript</h3>
+                <p className="text-gray-600">Full TypeScript support for better DX</p>
+            </div>
+        </div>
+
+        <!-- Installation -->
+        <div id="install" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Installation</h2>
+            <div class="bg-gray-900 text-gray-100 p-6 rounded-lg">
+                <pre><code>npm install lumina-ui
+yarn add lumina-ui
+pnpm add lumina-ui</code></pre>
+            </div>
+        </div>
+
+        <!-- Quick Start -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Quick Start</h2>
+            <div class="bg-gray-900 text-gray-100 p-6 rounded-lg">
+                <pre><code>import { ThemeProvider, Button, Card } from 'lumina-ui';
+import 'lumina-ui/dist/style.css';
+
+function App() {
+  return (
+    &lt;ThemeProvider defaultTheme="light"&gt;
+      &lt;Card&gt;
+        &lt;h1&gt;Welcome to Lumina UI&lt;/h1&gt;
+        &lt;Button variant="gradient"&gt;Get Started&lt;/Button&gt;
+      &lt;/Card&gt;
+    &lt;/ThemeProvider&gt;
+  );
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Components Preview -->
+        <div id="components" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Components</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4">Buttons</h3>
+                    <div class="flex gap-2 flex-wrap">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded">Default</button>
+                        <button class="border border-gray-300 px-4 py-2 rounded">Outline</button>
+                        <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded">Gradient</button>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4">Inputs</h3>
+                    <input type="text" placeholder="Default input" class="w-full border border-gray-300 px-4 py-2 rounded mb-2">
+                    <input type="text" placeholder="Filled input" class="w-full bg-gray-100 border border-transparent px-4 py-2 rounded">
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentation Link -->
+        <div class="text-center">
+            <h2 class="text-2xl font-bold mb-4">Ready to build something amazing?</h2>
+            <a href="/docs" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition inline-block">
+                View Full Documentation
+            </a>
+        </div>
+    </div>
+</body>
+</html>

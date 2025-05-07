@@ -1,0 +1,52 @@
+# Source files
+src/
+examples/
+.storybook/
+
+# Development files
+*.stories.tsx
+*.test.tsx
+*.config.ts
+*.config.js
+tsconfig.json
+vite.config.ts
+tailwind.config.js
+postcss.config.js
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Development dependencies
+node_modules/
+.env
+.env.*
+
+# Build artifacts
+storybook-static/
+coverage/
+.turbo/
+.next/
+src/**/*.stories.tsx
+
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git files
+.gitignore
+.git/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Keep these
+!dist/
+!README.md
+!LICENSE

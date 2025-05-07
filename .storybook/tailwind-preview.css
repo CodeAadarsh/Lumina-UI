@@ -1,0 +1,14 @@
+/* Basic tailwind-like styles to verify CSS is loading */
+.bg-blue-500 { background-color: #3b82f6; }
+.text-white { color: #ffffff; }
+.p-4 { padding: 1rem; }
+.rounded { border-radius: 0.25rem; }
+.font-bold { font-weight: 700; }
+
+.storybook-test-element {
+  border: 3px solid red;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+}
