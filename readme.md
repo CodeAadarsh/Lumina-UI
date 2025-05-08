@@ -1,11 +1,11 @@
 # Lumina UI React
 
 <div align="center">
-  <img src="https://via.placeholder.com/1200x300/0a0a0a/ffffff?text=Lumina+UI+React" alt="Lumina UI React" width="100%" />
+  <img src="src/utils/logo-n.png" alt="Lumina UI React" width="100%" />
   <p><strong>A modern, visually stunning UI component library for React with rich theming and interactive components</strong></p>
   
   <a href="https://github.com/CodeAadarsh/Lumina-UI/blob/main/LICENSE">
-    <img src="src/utils/logo-n.png" alt="License" />
+    <img src="https://img.shields.io/github/license/CodeAadarsh/Lumina-UI" alt="License" />
   </a>
   <img src="https://img.shields.io/npm/v/lumina-ui-react" alt="npm version" />
   <img src="https://img.shields.io/npm/dt/lumina-ui-react" alt="npm downloads" />
