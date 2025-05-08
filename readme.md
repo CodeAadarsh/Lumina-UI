@@ -1,7 +1,7 @@
 # Lumina UI React
 
 <div align="center">
-  <img src="https://via.placeholder.com/1200x300/0a0a0a/ffffff?text=Lumina+UI+React" alt="Lumina UI React" width="100%" />
+  <img src="src/utils/logo.svg" alt="Lumina UI React" width="100%" />
   <p><strong>A modern, visually stunning UI component library for React with rich theming and interactive components</strong></p>
   
   <a href="https://github.com/CodeAadarsh/Lumina-UI/blob/main/LICENSE">

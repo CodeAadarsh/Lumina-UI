@@ -6,6 +6,12 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declarationDir": "./types",
+    "emitDeclarationOnly": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

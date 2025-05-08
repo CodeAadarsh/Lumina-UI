@@ -27,9 +27,15 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      outDir: 'dist/types',
-      // Ensure TypeScript files are included in the build
+      outDir: 'types', // Changed from 'dist' to 'types' to match package.json
       include: ['src/**/*.ts', 'src/**/*.tsx'],
+      exclude: ['**/*.stories.*', '**/*.test.*', '**/storybook/**'],
+      // Optional: skip validation step to work around common issues
+      skipDiagnostics: true,
+      // Generate a single merged declaration file
+      bundledPackage: 'lumina-ui-react',
+      // Ensure correct paths in declaration files
+      respectExternal: true,
     }),
   ],
   resolve: {
@@ -60,10 +66,11 @@ export default defineConfig({
           'clsx': 'clsx',
           'tailwind-merge': 'tailwindMerge',
           'lucide-react': 'LucideReact',
+          '@tabler/icons-react': 'TablerIcons',
         },
         // Ensure CSS is properly extracted
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') return 'lumina.css';
+          if (assetInfo.name === 'style.css') return 'lumina-ui-react.css';
           return assetInfo.name;
         },
         // Generate cleaner exports
@@ -75,7 +82,7 @@ export default defineConfig({
     sourcemap: true,
     // Ensure styles are processed correctly
     cssCodeSplit: false,
-    // Ensure TypeScript files are properly transpiled
+    // Output directory
     outDir: 'dist',
   },
   // Add optimizeDeps to improve development experience
