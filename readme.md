@@ -5,7 +5,7 @@
   <p><strong>A modern, visually stunning UI component library for React with rich theming and interactive components</strong></p>
   
   <a href="https://github.com/CodeAadarsh/Lumina-UI/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/CodeAadarsh/Lumina-UI" alt="License" />
+    <img src="https://img.shields.io/github/license/CodeAadarsh/Lumina-UI](https://raw.githubusercontent.com/CodeAadarsh/Lumina-UI/refs/heads/main/src/utils/logo.svg" alt="License" />
   </a>
   <img src="https://img.shields.io/npm/v/lumina-ui-react" alt="npm version" />
   <img src="https://img.shields.io/npm/dt/lumina-ui-react" alt="npm downloads" />
