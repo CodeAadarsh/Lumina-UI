@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export default {
-  title: 'Components/Carousel',
+  title: 'UI/Carousel',
   component: Carousel,
   tags: ['autodocs'],
   argTypes: {

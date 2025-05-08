@@ -44,7 +44,7 @@ const StylesInjector = () => {
 };
 
 export default {
-  title: 'Components/ScrollMotion',
+  title: 'UI/ScrollMotion',
   component: ScrollMotion,
   tags: ['autodocs'],
   argTypes: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { AnimatedTestimonialSlider } from './AnimatedTestimonialSlider';
 
 export default {
-  title: 'Lumina UI/AnimatedTestimonialSlider',
+  title: 'UI/AnimatedTestimonialSlider',
   component: AnimatedTestimonialSlider,
   parameters: {
     layout: 'fullscreen',

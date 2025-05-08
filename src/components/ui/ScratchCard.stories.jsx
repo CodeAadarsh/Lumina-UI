@@ -3,7 +3,7 @@ import ScratchCard from './ScratchCard';
 import { ThemeProvider } from '../../providers/ThemeProvider';
 
 export default {
-  title: 'Lumina UI/ScratchCard',
+  title: 'UI/ScratchCard',
   component: ScratchCard,
   parameters: {
     layout: 'centered',

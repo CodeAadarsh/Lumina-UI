@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 export default {
-  title: 'Components/Button',
+  title: 'UI/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

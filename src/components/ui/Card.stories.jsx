@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 export default {
-  title: 'Components/Card',
+  title: 'UI/Card',
   component: Card,
   subcomponents: { CardHeader, CardTitle, CardDescription, CardContent, CardFooter },
   argTypes: {

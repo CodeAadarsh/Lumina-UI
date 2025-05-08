@@ -1,0 +1,21 @@
+import { Meta, StoryObj } from '@storybook/react';
+import { Spotlight } from './Spotlight';
+declare const meta: Meta<typeof Spotlight>;
+export default meta;
+type Story = StoryObj<typeof Spotlight>;
+export declare const Default: Story;
+export declare const GlassTheme: Story;
+export declare const TechDarkBeam: Story;
+export declare const RainbowAnimation: Story;
+export declare const NeumorphicDirectional: Story;
+export declare const GlowPulse: Story;
+export declare const BreathingSpotlight: Story;
+export declare const SpotlightCards: Story;
+export declare const HeroSection: Story;
+export declare const SpotlightColors: Story;
+export declare const SpotlightIntensity: Story;
+export declare const SpotlightTypes: Story;
+export declare const MultiLayered: Story;
+export declare const AnimationComparison: Story;
+export declare const InteractivePlayground: Story;
+//# sourceMappingURL=Spotlight.stories.d.ts.map

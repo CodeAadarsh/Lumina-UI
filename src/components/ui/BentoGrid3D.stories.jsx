@@ -1,9 +1,9 @@
 import React from 'react';
-import { BentoGrid, BentoGridItem } from './BentoGrid3D';
+import { BentoGrid, BentoGridItem } from './BentoGrid';
 import { ThemeProvider } from '../../providers/ThemeProvider';
 
 export default {
-  title: 'Lumina UI/BentoGrid',
+  title: 'UI/BentoGrid',
   component: BentoGrid,
   parameters: {
     layout: 'fullscreen',
